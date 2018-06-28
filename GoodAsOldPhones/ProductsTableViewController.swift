@@ -10,11 +10,11 @@ import UIKit
 
 class ProductsTableViewController: UITableViewController {
     
-    var productNames: [String]?
+    var products: [Product]?
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let pNames = productNames {
-            return pNames.count;
+        if let p = products {
+            return p.count;
         }
         return 0;
     }
@@ -26,13 +26,15 @@ class ProductsTableViewController: UITableViewController {
 //            cell.textLabel.text = "Good bye friend"
 //        }
         
-        let productName = productNames?[indexPath.row]
+        let product = products?[indexPath.row]
         
-        if let pName = productName {
-            cell.textLabel?.text = pName
+        if let p = product {
+            cell.textLabel?.text = p.name
+            if let i = p.cellImage {
+                cell.imageView?.image = UIImage(named: i)
+            }
         }
             
-//        cell.imageView?.image = UIImage(named: "something")
         return cell
     }
     
@@ -44,13 +46,34 @@ class ProductsTableViewController: UITableViewController {
                 let indexPath = tableView.indexPathforCell(cell) else {
                     return
                 }
-            productVC?.productName = productNames?[indexPath.row]
+            productVC?.product = products?[indexPath.row]
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        productNames = ["1907 Wall Street", "1921 Dial Phone", "1937 Desk Set", "1984 Motoroal Portable"]
+        let product1 = Product()
+        let product2 = Product()
+        let product3 = Product()
+        let product4 = Product()
+        
+        product1.name = "1907 Wall Street"
+        product1.productImage = "something"
+        product1.cellImage = "something"
+        
+        product2.name = "1907 Wall Street"
+        product2.productImage = "something"
+        product2.cellImage = "something"
+
+        product3.name = "1907 Wall Street"
+        product3.productImage = "something"
+        product3.cellImage = "something"
+
+        product4.name = "1907 Wall Street"
+        product4.productImage = "something"
+        product4.cellImage = "something"
+
+        products = [product1, product2, product3, product4]
     }
 }
