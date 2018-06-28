@@ -17,5 +17,8 @@ class ProductViewController: UIViewController {
         productNameLabel.text = "1937 Desk Phone"
         productImageView.image = UIImage(named: "download")
     }
-
+    @IBAction func addToCartPressed(_ sender: Any) {
+        print("Button tapped")
+    }
+    
 }

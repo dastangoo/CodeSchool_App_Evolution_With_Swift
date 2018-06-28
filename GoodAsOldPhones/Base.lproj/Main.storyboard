@@ -33,6 +33,9 @@
                                 <rect key="frame" x="-6" y="610" width="381" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Button"/>
+                                <connections>
+                                    <action selector="addToCartPressed:" destination="dJs-Hv-J6z" eventType="touchUpInside" id="jAP-KA-bqv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
