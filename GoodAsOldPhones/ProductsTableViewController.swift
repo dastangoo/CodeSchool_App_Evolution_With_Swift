@@ -35,10 +35,16 @@ class ProductsTableViewController: UITableViewController {
 //        cell.imageView?.image = UIImage(named: "something")
         return cell
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowProduct" {
             let productVC = segue.destination as? ProductViewController
-            productVC?.productName = "Really old phone"
+            
+            guard let cell = sender as? UITableViewCell,
+                let indexPath = tableView.indexPathforCell(cell) else {
+                    return
+                }
+            productVC?.productName = productNames?[indexPath.row]
         }
     }
     
