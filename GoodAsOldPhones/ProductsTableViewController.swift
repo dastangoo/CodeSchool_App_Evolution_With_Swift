@@ -10,8 +10,13 @@ import UIKit
 
 class ProductsTableViewController: UITableViewController {
     
+    var productNames: [String]?
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5;
+        if let pNames = productNames {
+            return pNames.count;
+        }
+        return 0;
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -21,8 +26,13 @@ class ProductsTableViewController: UITableViewController {
 //            cell.textLabel.text = "Good bye friend"
 //        }
         
-        cell.textLabel?.text = "Good bye friend"
-        cell.imageView?.image = UIImage(named: "something")
+        let productName = productNames?[indexPath.row]
+        
+        if let pName = productName {
+            cell.textLabel?.text = pName
+        }
+            
+//        cell.imageView?.image = UIImage(named: "something")
         return cell
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -30,5 +40,11 @@ class ProductsTableViewController: UITableViewController {
             let productVC = segue.destination as? ProductViewController
             productVC?.productName = "Really old phone"
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        productNames = ["1907 Wall Street", "1921 Dial Phone", "1937 Desk Set", "1984 Motoroal Portable"]
     }
 }
