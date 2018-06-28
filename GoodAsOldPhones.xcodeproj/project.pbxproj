@@ -13,6 +13,7 @@
 		224A225020E49E9B00873011 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 224A224E20E49E9B00873011 /* LaunchScreen.storyboard */; };
 		224A225820E4A8F600873011 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A225720E4A8F600873011 /* ProductViewController.swift */; };
 		224A225A20E4B4E400873011 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224A225920E4B4E400873011 /* ContactViewController.swift */; };
+		22566C8F20E4C203007C6AC8 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22566C8E20E4C203007C6AC8 /* ProductsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		224A225120E49E9B00873011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		224A225720E4A8F600873011 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		224A225920E4B4E400873011 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		22566C8E20E4C203007C6AC8 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				224A225120E49E9B00873011 /* Info.plist */,
 				224A225720E4A8F600873011 /* ProductViewController.swift */,
 				224A225920E4B4E400873011 /* ContactViewController.swift */,
+				22566C8E20E4C203007C6AC8 /* ProductsTableViewController.swift */,
 			);
 			path = GoodAsOldPhones;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				224A225820E4A8F600873011 /* ProductViewController.swift in Sources */,
+				22566C8F20E4C203007C6AC8 /* ProductsTableViewController.swift in Sources */,
 				224A224620E49E9A00873011 /* AppDelegate.swift in Sources */,
 				224A225A20E4B4E400873011 /* ContactViewController.swift in Sources */,
 			);
